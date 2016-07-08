@@ -4,8 +4,8 @@ node_js:
   - "5"
   - "node"
 script:
-  - npm run test
-  - npm run pree2e && npm run e2e
+  - cd client && npm run test
+  - cd client && npm run pree2e && npm run e2e
 
 install:
   - npm install
