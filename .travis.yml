@@ -8,7 +8,7 @@ script:
   - cd client && npm run pree2e && npm run e2e
 
 install:
-  - npm install
+  - cd client && npm install
 
 notifications:
   email: false
