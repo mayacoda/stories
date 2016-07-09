@@ -10,4 +10,4 @@ install:
   - cd client && npm install
 
 notifications:
-  email: false
+  email: true

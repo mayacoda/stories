@@ -1,14 +1,27 @@
-import { ClientPage } from './app.po';
+import {ClientPage, MyTimelinesPage} from './app.po';
 
-describe('client App', function() {
+describe('client App', () => {
   let page: ClientPage;
 
   beforeEach(() => {
     page = new ClientPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should instantiate PublicTimelines', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Public Timelines go here');
   });
+});
+
+describe('My Timelines page', () => {
+  let page: MyTimelinesPage;
+
+  beforeEach(() => {
+    page = new MyTimelinesPage();
+  });
+
+  it('should instantiate MyTimelinesComponent', () => {
+    page.navigateTo();
+    expect(page.getParagraphText()).toEqual('My Timelines go here');
+  })
 });

@@ -4,6 +4,16 @@ export class ClientPage {
   }
 
   getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+    return element(by.css('public-timelines div')).getText();
+  }
+}
+
+export class MyTimelinesPage {
+  navigateTo() {
+    return browser.get('/my-timelines');
+  }
+
+  getParagraphText() {
+    return element(by.css('my-timelines div')).getText();
   }
 }
