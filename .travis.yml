@@ -1,11 +1,10 @@
 language: node_js
 node_js:
-  - "4"
   - "5"
   - "node"
 script:
-  - cd client && npm run test
-  - cd client && npm run pree2e && npm run e2e
+  - npm run test
+  - npm run pree2e && npm run e2e
 
 install:
   - cd client && npm install
