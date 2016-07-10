@@ -1,13 +1,17 @@
 language: node_js
 node_js:
-  - "5"
-  - "node"
+- '5'
+- node
 script:
-  - npm run test
-  - npm run pree2e && npm run e2e
-
+- npm run test
+- npm run pree2e && npm run e2e
 install:
-  - cd client && npm install
-
+- cd client && npm install
 notifications:
   email: true
+addons:
+  sauce_connect: true
+env:
+  global:
+  - secure: OOGVuKlHjcLXNUsv6Et61gk4u7btLy6bkLO+b3Cfim39eH4QOfpdHfk/wCoYp+PqPG5YhUw4US9YDPQC72xMe3pgocDPV43nC6deu5HbRv8zRhP9lJzw1c0McvPzmpHe7D0ui0SXOoORgFW1H7d6c5b3Jbr2uYn4u4Xzzln1Ov9bFK+uEUkxBwgfqem/oaW+ikhupb9Ib93+SwhoWo+USnm9wpqZrs5U+GwvHgVHBVi6JeCLIguiQHiwcrYwMw6xeOOEEd3/A/eR1+z4JkSmPeW+iOc0fJVMRuTo8j9U/Bi6ihSSDL3ykBJ5+iWpvUe5sNwkd8h1SUu3d40gqlrasVT/ssVTC+dw3TkEA3q1sc/cG2Q0iaMWDG/WdUEEOOmG5OPr+yvByxRl8PFm0JKqgDrUEQuECupxEWhpl4pJLACdRDzWGsdw0MY2wLTxazPmNBGBZvfTExmwJ1ZSWWJwLsH3Mpj2d9TYp8uh8tkcnueeL4nUD2GUvfXE3AzdKTq3cB2SDHrmBfrs/++XtUxBiYS3ZQ7BOKMQaHqDX6jLf1ZMI+61U2u9lPA3jMuEVEySipHQkfIx5hysL/sQNiLByYZI0wvZQDsRNjMgCj51vmbDI4zRY1wpxTnnGU/rhqcAxXt7GKJrvKTlc6UUwgfVcWW8izxGrN4ZwF9v6jRLFNc=
+  - secure: XAmpuAHN7kyjhNbI6teEfMAEeGhOKQ7U2bMvRfNCXg91CFjSO2+8hVpyk22LiPK3Ii6HeVrt7ci6T24bWUQaylx6ulNKlPE9fgHEZEWQxoySWw5JJpNkGUfSFbA8TBv9ty9kDO3Ul9wBUWoZ8WzLyJqrzt0LSnTK+Hf32aOjkf/00ROexEx1Uh4itCPGIAv4Jsdn/4yZ7Jn2p5nA0DIy+6vh0NqmEBS0jsEs82yzEsCiYQumN1LotsDbs7zfKmc4ByLU6t2v6yklOP2gUXfjdYbAtHcmDHSZEUYC/6dqAXihr/iBtiXk8zLzZNx+bZDppiwYy09vMsTkQXQorczccOcNT4QpIfs6p9A0qZvH71cE7mRIIoz/sNkEKARhyRM52ynO8bd7xRL2RBQWrtuqIpBmZyoLIkrCNAQzyRi0q0XmMxnVKfU8VPofQkBsppaw/cX0vFQXZr2baaMbam3APUxKyrEuQvFUmuRnr0KtnIHUdlX0S6iiZ79nTRZbRC7pDMYMQeKS/yPVSVJvOM8lUmNdOh4dugi7HFiM0aJEs2ozPDP2R+hLr2O6GGMUmH32aOMBUnDip/rAIl1FNIhXoZtNCl7cxKJFDgBrjVBYwuDfGZfHOm/bqPXb22k8NKJC2OdyRu3TIBWNZ6U7Svh8BGba8RD02cxSN7N8zaR6OMY=
