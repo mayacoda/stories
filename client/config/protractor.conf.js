@@ -34,6 +34,7 @@ var config = {
 
 
 if (process.env.TRAVIS) {
+    console.log("BUILDING ON TRAVIS");
     config.sauceUser = process.env.SAUCE_USERNAME;
     config.sauceKey = process.env.SAUCE_ACCESS_KEY;
     config.capabilities = {
