@@ -1,0 +1,8 @@
+<div>
+    Public Timelines go here
+
+    <li *ngFor="let timeline of timelineList | async">
+        <a [routerLink]="['/public/' + timeline.id]">Title: {{ timeline.title }}</a>
+        Author: {{ timeline.author.name }}
+    </li>
+</div>
