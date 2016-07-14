@@ -10,7 +10,6 @@ import {UserService} from "./services/user.service";
     moduleId: module.id,
     selector: 'app-root',
     templateUrl: 'app.component.html',
-    styleUrls: ['app.component.css'],
     directives: [HeaderComponent, FooterComponent, ROUTER_DIRECTIVES],
     providers: [HTTP_PROVIDERS, ApiService, UserService]
 })

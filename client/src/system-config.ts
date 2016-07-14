@@ -6,10 +6,20 @@
  * User Configuration.
  **********************************************************************************************/
 /** Map relative paths to URLs. */
-const map: any = {};
+const map: any = {
+    'ng2-bootstrap': 'vendor/ng2-bootstrap',
+    'bootstrap': 'vendor/bootstrap',
+};
 
 /** User packages configuration. */
-const packages: any = {};
+const packages: any = {
+    'ng2-bootstrap': {
+        format: 'cjs',
+        defaultExtension: 'js',
+        main: 'ng2-bootstrap.js'
+
+    }
+};
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /***********************************************************************************************
