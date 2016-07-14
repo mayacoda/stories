@@ -1,12 +1,29 @@
 <div>
-    Login page goes here
+    <h1>Login page goes here</h1>
 
-    <form>
-        <div class="form-group">
-            <label for="identifier" class="sr-only">Username or Email</label>
-            <input type="text" id="identifier" class="form-control" placeholder="Username or Email">
-            <label for="password" class="sr-only">Password</label>
-            <input type="text" id="password" class="form-control" placeholder="Password">
+    <form (ngSubmit)="login(loginForm.value)" #loginForm="ngForm">
+        <div ngControlGroup="userObj">
+            <div class="form-group">
+                <label for="identifier" class="sr-only">Username or Email</label>
+                <input type="text"
+                       id="identifier"
+                       class="form-control"
+                       [(ngModel)]="userObj.user"
+                       name="user"
+                       placeholder="Username or Email">
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="sr-only">Password</label>
+                <input type="password"
+                       id="password"
+                       class="form-control"
+                       name="password"
+                       [(ngModel)]="userObj.password"
+                       placeholder="Password">
+            </div>
         </div>
+
+        <button class="btn btn-block btn-primary" type="submit">Log In</button>
     </form>
 </div>
