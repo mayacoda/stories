@@ -17,7 +17,7 @@ export class UserService {
     }
 
     getCurrentUser(): Observable<User> {
-        return this.currentUser.asObservable();
+        return this.currentUser.asObservable().share();
     }
 
 }

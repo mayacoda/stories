@@ -6,11 +6,11 @@ import {Router} from "@angular/router";
     selector: "[authProtected]"
 })
 export class AuthProtectedDirective {
-    // constructor(private userService: UserService, private router: Router, private location: Location) {
-    //     this.userService.getCurrentUser().filter(user => !user).subscribe(() => {
-    //         this.location.replace("/");
-    //         this.router.navigate(["login"]);
-    //     });
-    // }
-    constructor() {}
+    constructor(private userService: UserService, private router: Router) {
+        this.userService.getCurrentUser().filter(user => !user)
+            .distinctUntilChanged()
+            .subscribe(() => {
+            this.router.navigate(["/login"]);
+        });
+    }
 }

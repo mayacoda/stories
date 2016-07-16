@@ -9,9 +9,13 @@ import {UserService} from "../../services/user.service";
     directives: [ROUTER_DIRECTIVES]
 })
 export class HeaderComponent {
-    isUserLoggedIn: boolean;
+    private isUserLoggedIn: boolean;
 
     constructor(private userService: UserService) {
         this.userService.getCurrentUser().subscribe(user => this.isUserLoggedIn = !!user);
+    }
+
+    private logOut(): void {
+        this.userService.logoutUser();
     }
 }
