@@ -1,7 +1,7 @@
 <header>
-    <nav class="navbar navbar-dark navbar-full bg-inverse">
+    <nav class="navbar navbar-dark navbar-fixed-top navbar-full bg-inverse">
         <a [routerLink]="['/']" class="navbar-brand">Stories</a>
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav pull-xs-right">
             <li class="nav-item" *ngIf="!isUserLoggedIn">
                 <a class="nav-link" [routerLink]="['/login']">Login</a>
             </li>

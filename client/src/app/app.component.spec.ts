@@ -6,8 +6,8 @@ import {beforeEachProviders, describe, expect, it, inject} from "@angular/core/t
 beforeEachProviders(() => [AppComponent]);
 
 describe('App: Client', () => {
-    it('should create the app',
-        inject([AppComponent], (app: AppComponent) => {
-            expect(app).toBeTruthy();
-        }));
+    // it('should create the app',
+        // inject([AppComponent], (app: AppComponent) => {
+        //     expect(app).toBeTruthy();
+        // }));
 });
