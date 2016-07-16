@@ -2,6 +2,7 @@ import {Injectable} from "@angular/core";
 import {Http} from "@angular/http";
 import {Observable} from "rxjs/Observable"
 import {Timeline} from "../models/timeline.model";
+import {User} from "../models/user.model";
 
 @Injectable()
 export class ApiService {
@@ -25,6 +26,11 @@ export class ApiService {
     getMyTimelines(): Observable<Timeline[]> {
         console.warn("Not yet implemented");
         return <Observable<Timeline[]>> Observable.empty();
+    }
+
+    registerUser(email: string): Observable<User> {
+        console.warn("not yet implemented");
+        return <Observable<User>> Observable.empty();
     }
 
 }

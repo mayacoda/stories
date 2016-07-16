@@ -25,7 +25,8 @@ export class LoginComponent {
             this.userService.loginUser(user);
             this.router.navigate(['/']);
         }, err => {
+            console.error(err);
             this.loginFailed = true;
-        })
+        });
     }
 }
