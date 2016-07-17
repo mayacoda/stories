@@ -13,3 +13,14 @@
   margin-bottom: 70px;
   min-height: calc(100vh - 180px);
 }
+
+.user-image {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 5px;
+  img {
+    height: 30px;
+  }
+}

@@ -33,4 +33,8 @@ export class ApiService {
         return <Observable<User>> Observable.empty();
     }
 
+    getActiveUser(): Observable<User> {
+        return this.http.get(this.endpoint + '/my').map(res => res.json());
+    }
+
 }

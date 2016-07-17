@@ -19,8 +19,10 @@ export class AppComponent {
 
     constructor(private userService: UserService, private router: Router) {
 
-        const isLoginPage = this.router.events.map(event => event.url != '/login');
+        const isNotLoginPage = this.router.events.map(event => event.url !== '/login');
         const noUser =  this.userService.getCurrentUser().map(user => !(!!user));
-        isLoginPage.combineLatest(noUser, (page, user) => page && user).subscribe(res => this.showCTA = res);
+        isNotLoginPage
+            .combineLatest(noUser, (page, user) => page && user)
+            .subscribe(res => this.showCTA = res);
     }
 }

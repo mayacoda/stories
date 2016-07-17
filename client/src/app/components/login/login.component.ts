@@ -18,6 +18,12 @@ export class LoginComponent {
             user: '',
             password: ''
         };
+
+        this.userService.getCurrentUser().filter(user => !!user)
+            .distinctUntilChanged()
+            .subscribe(() => {
+                this.router.navigate([""]);
+            });
     }
 
     login(form) {
