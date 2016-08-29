@@ -1,7 +1,19 @@
 <div class="card">
     <img class="card-img-top max-image" [src]="timeline.image" [title]="timeline.title">
-    <div class="card-block">
-        <h4 class="card-title"><a [routerLink]="['/public/' + timeline.id]">{{ timeline.title }}</a></h4>
+    <div class="card-block" *ngIf="visibility === 'public'">
+        <h4 class="card-title">
+            <a [routerLink]="['/public/' + timeline.id]">{{ timeline.title }}</a>
+        </h4>
         <p class="card-text">by {{ timeline.author.name }}</p>
+        <hr>
+        <p class="card-text">{{ timeline.description }}</p>
+    </div>
+
+    <div class="card-block" *ngIf="visibility === 'private'">
+        <h4 class="card-title">
+            <a>{{ timeline.title }}</a>
+        </h4>
+        <a class="btn btn-primary btn-sm" [routerLink]="['/my/timeline/' + timeline.id]">Edit</a>
+        <button class="btn btn-danger-outline btn-small" (click)="deleteTimeline()">Delete</button>
     </div>
 </div>

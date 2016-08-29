@@ -1,0 +1,12 @@
+<div class="card">
+    <form class="card-block" (submit)="addTimeline(timelineName)">
+        <div class="form-group">
+            <input type="text"
+                   name="timelineName"
+                   class="form-control"
+                   placeholder="Timeline name"
+                   [(ngModel)]="timelineName">
+        </div>
+        <button type="submit" class="btn btn-block btn-primary">+ Add timeline</button>
+    </form>
+</div>

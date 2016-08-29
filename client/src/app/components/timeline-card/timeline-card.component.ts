@@ -1,4 +1,4 @@
-import {Component, Input} from "@angular/core";
+import {Component, Input, OnInit} from "@angular/core";
 import {Timeline} from "../../models/timeline.model";
 import {ROUTER_DIRECTIVES} from "@angular/router";
 
@@ -8,11 +8,19 @@ import {ROUTER_DIRECTIVES} from "@angular/router";
     templateUrl: 'timeline-card.component.html',
     directives: [ROUTER_DIRECTIVES]
 })
-export class TimelineCardComponent {
+export class TimelineCardComponent implements OnInit {
+    ngOnInit(): any {
+        return undefined;
+    }
+
     @Input() timeline: Timeline;
+    @Input() visibility: "public" | "private";
 
     constructor() {
+    }
 
+    deleteTimeline() {
+        console.warn("deleting not yet implemented");
     }
 
 }

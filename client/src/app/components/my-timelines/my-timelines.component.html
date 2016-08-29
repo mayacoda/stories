@@ -1,3 +1,11 @@
 <div authProtected>
     My Timelines go here
+
+    <new-timeline-button class="col-lg-4 col-sm-6"></new-timeline-button>
+
+    <timeline-card *ngFor="let timeline of myTimelines | async"
+                   [timeline]="timeline"
+                   class="col-lg-4 col-sm-6"
+                   [visibility]="'private'">
+    </timeline-card>
 </div>

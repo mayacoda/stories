@@ -11,8 +11,8 @@ export class CTAComponent {
     constructor(private apiService: ApiService) {
     }
 
-    registerUser(userEmail: string) {
-        this.apiService.registerUser(userEmail)
+    registerUser(userName: string, userEmail: string) {
+        this.apiService.registerUser(userName, userEmail)
     }
 
 }
